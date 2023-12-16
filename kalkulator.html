@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Pertambahan</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .container{
+            background-color: #e9e9e9;
+            border-style: solid;
+            width: 700px;
+            height: 200px;
+            margin-left: 290px;
+            border-radius: 1em;
+            border-style: solid black;
+            border-width: 2px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Kalkulator Pertambahan</h1>
+
+    <form id="calculatorForm">
+        <label for="number1"><b>Bilangan 1:</b></label>
+        <input type="number" id="number1" required>
+
+        <label for="number2"><b>Bilangan 2:</b></label>
+        <input type="number" id="number2" required>
+
+        <br>
+
+        <label for="result"><b>Hasil:</b></label>
+        <input type="text" id="result" readonly>
+        <button type="button" onclick="calculate()">Hitung</button>
+    </form>
+
+    <script>
+        function calculate() {
+            // Ambil nilai dari input
+            var num1 = document.getElementById("number1").value;
+            var num2 = document.getElementById("number2").value;
+
+            // Lakukan operasi pertambahan
+            var result = parseFloat(num1) + parseFloat(num2);
+
+            // Tampilkan hasil pada input hasil
+            document.getElementById("result").value = result;
+        }
+    </script>
+    </div>
+</body>
+</html>
